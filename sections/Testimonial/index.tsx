@@ -24,7 +24,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
   }
 
   return (
-    <section className="py-[112px] px-4 md:px-6 lg:px-8 bg-brown-light text-grey">
+    <section className="py-[112px] paddingX bg-brown-light text-grey">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-titleMd md:text-heading font-medium text-center mb-12 md:mb-20">
           Don&apos;t just take our word for it

@@ -238,7 +238,7 @@ export const Card = ({
         <div className="relative z-40 p-8 flex mt-auto">
           <motion.p
             layoutId={layout ? `title-${card.title}` : undefined}
-            className="text-beige text-titleMd md:text-bodyLg font-normal max-w-xs text-left [text-wrap:balance] font-sans mt-2 leading-[57px]"
+            className="text-beige text-titleMd md:text-bodyLg font-normal max-w-xs text-left [text-wrap:balance] font-sans mt-2 leading-10 md:leading-[57px]"
           >
             {card.title}
           </motion.p>

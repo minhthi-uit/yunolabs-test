@@ -2,13 +2,19 @@ import { IHero } from '@/types';
 import Image from 'next/image';
 
 const Hero: React.FC<{ heroContent: IHero }> = ({ heroContent }) => (
-  <section className="relative w-full mx-auto pt-[1000px]">
-    <Image fill priority src={heroContent.backgroundImage} alt={heroContent.title} className=" absolute object-cover" />
-    <div className="relative bottom-7 md:bottom-20 left-0 paddingX text-white z-10">
-      <p className="text-titleMd md:text-4xl xl:text-5xl text-white lg:w-2/3">{heroContent.title}</p>
+  <section className="relative w-full mx-auto pt-[72px] sm:pt-[400px] xl:pt-[700px]">
+    <Image
+      fill
+      priority
+      src={heroContent.backgroundImage}
+      alt={heroContent.title}
+      className="absolute inset-0 object-cover w-full h-full"
+    />
+    <div className="relative z-10 bottom-7 md:bottom-20 left-0 paddingX text-white">
+      <h1 className="text-body md:text-bodyLg xl:text-heading text-beige lg:w-2/3">{heroContent.title}</h1>
       <button
-        aria-label="Book a service"
-        className="mt-5 md:mt-10 text-white border border-white rounded-full py-2 px-5 
+        aria-label="Book now"
+        className="mt-3 md:mt-10 text-white border border-white rounded-full py-2 px-5 
             hover:bg-lightBlack hover:text-white hover:border-lightBlack 
             focus:outline-none focus:ring-2 focus:ring-lightBlack 
             focus:ring-offset-2 transition-all"

@@ -2,22 +2,26 @@ import { Navigation } from '@/constants';
 import { X } from 'lucide-react';
 import Link from 'next/link';
 
-export default function MobileNavbar({ setOpenMenu }: { setOpenMenu: (value: boolean) => void }) {
+interface MobileNavbarProps {
+  setOpenMenu: (value: boolean) => void;
+}
+
+const MobileNavbar: React.FC<MobileNavbarProps> = ({ setOpenMenu }) => {
   return (
-    <main className="absolute inset-0 bg-white flex flex-col items-center justify-center transition-all duration-500">
+    <section className="fixed inset-0 bg-beige flex flex-col items-center sm:items-start px-4 justify-center transition-all duration-500 z-50">
       <button
-        aria-label='close menu'
-        className="absolute top-6 right-6 bg-white text-black w-10 h-10 rounded-full shadow-lg hover:bg-lightBlack hover:text-white hover:scale-110 transition-transform flex items-center justify-center"
+        aria-label="close menu"
+        className="absolute top-6 right-6 bg-beige text-primary w-10 h-10 rounded-full shadow-lg transition-transform flex items-center justify-center"
         onClick={() => setOpenMenu(false)}
       >
         <X className="w-6 h-6 text-center" />
       </button>
       <nav>
-        <ul className="flex flex-col items-center gap-6">
+        <ul className="grid grid-cols-1 sm:grid-cols-2 items-center gap-6">
           {Navigation.map(({ href, text }) => (
             <li key={href}>
               <Link href={href}>
-                <span className="text-gray-800 text-titleMd font-semibold tracking-wide hover:text-sky-500 transition-colors">
+                <span className="text-grey text-bodyLd md:text-titleMd xl:text-heading text-[#7D614B] font-medium tracking-wide transition-colors hover:text-primary">
                   {text}
                 </span>
               </Link>
@@ -25,6 +29,8 @@ export default function MobileNavbar({ setOpenMenu }: { setOpenMenu: (value: boo
           ))}
         </ul>
       </nav>
-    </main>
+    </section>
   );
-}
+};
+
+export default MobileNavbar;

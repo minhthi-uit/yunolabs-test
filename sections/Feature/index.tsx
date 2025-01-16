@@ -10,7 +10,7 @@ export default function FeatureGrid() {
             key={index}
             className="flex flex-col bg-white border-l border-t-0 border-b border-r-0 rounded-es-[100px] border-gray-500 p-7"
           >
-            <h2 className="text-titleMd lg:text-bodyLg text-brown font-normal leading-[57px]">
+            <h2 className="text-titleMd lg:text-bodyLg text-brown font-normal lleading-10 md:leading-[57px]">
               {item.title}
             </h2>
 

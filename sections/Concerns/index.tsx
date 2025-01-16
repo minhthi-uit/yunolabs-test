@@ -9,7 +9,7 @@ export function Concerns() {
   ));
 
   return (
-    <section className="w-full h-full py-20">
+    <section className="w-full h-full py-20 paddingX">
       <div className="container max-w-7xl mx-auto">
         <h2 className="max-w-7xl mx-auto text-titleMd md:text-heading font-medium text-brown">
           Concerns

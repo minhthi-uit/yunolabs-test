@@ -1,6 +1,6 @@
 "use client"
 import Logo from '@/components/Logo';
-import { LucideMenu, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { useState } from 'react';
 import MobileNavbar from './MobileNavbar';
 
@@ -23,10 +23,12 @@ const Navbar: React.FC = () => {
 
 const HamburgerMenu: React.FC<{ openMenu: boolean; toggleMenu: () => void }> = ({ openMenu, toggleMenu }) => (
   !openMenu ? (
-    <LucideMenu
-      className="w-7 h-7 cursor-pointer transition-transform hover:scale-110"
-      onClick={toggleMenu}
-    />
+    <button onClick={toggleMenu} aria-label='open menu'>
+      <svg width="50" height="18" viewBox="0 0 50 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <line y1="1.5" x2="50" y2="1.5" stroke="#434343" stroke-width="2" />
+        <line y1="16.5" x2="50" y2="16.5" stroke="#434343" stroke-width="2" />
+      </svg>
+    </button>
   ) : (
     <X
       className="w-7 h-7 cursor-pointer transition-transform hover:rotate-90"
@@ -36,7 +38,7 @@ const HamburgerMenu: React.FC<{ openMenu: boolean; toggleMenu: () => void }> = (
 );
 
 const BookNowButton: React.FC = () => (
-  <button aria-label='book now' className="hidden md:block bg-lightBlack text-white border border-black rounded-full py-2 px-5 hover:bg-black transition-all">
+  <button aria-label='book now' className="hidden md:block bg-brown text-beige text-base rounded-full py-3 px-6 transition-all">
     Book now
   </button>
 );
