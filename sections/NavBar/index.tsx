@@ -36,7 +36,7 @@ const HamburgerMenu: React.FC<{ openMenu: boolean; toggleMenu: () => void }> = (
 );
 
 const BookNowButton: React.FC = () => (
-  <button className="hidden md:block bg-lightBlack text-white border border-black rounded-full py-2 px-5 hover:bg-black transition-all">
+  <button aria-label='book now' className="hidden md:block bg-lightBlack text-white border border-black rounded-full py-2 px-5 hover:bg-black transition-all">
     Book now
   </button>
 );

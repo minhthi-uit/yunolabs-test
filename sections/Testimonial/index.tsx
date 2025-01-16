@@ -57,6 +57,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
           </div>
 
           <button
+            aria-label='Previous slide'
             className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 h-10 w-10 rounded-full flex items-center justify-center transition-colors"
             onClick={prevSlide}
           >
@@ -68,6 +69,7 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
           </button>
 
           <button
+            aria-label='Next slide'
             className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 h-10 w-10 rounded-full flex items-center justify-center transition-colors"
             onClick={nextSlide}
           >
@@ -78,9 +80,10 @@ export default function TestimonialSlider({ testimonials }: TestimonialSliderPro
             <span className="sr-only">Next slide</span>
           </button>
 
-          <div className="flex justify-center gap-2 mt-8 md:mt-12">
+          <div className="flex justify-center gap-3 mt-8 md:mt-12">
             {Array.from({ length: totalSlides }).map((_, index) => (
               <button
+                aria-label={`Go to slide ${index + 1}`}
                 key={index}
                 className={cn(
                   'h-2 w-2 rounded-full transition-colors',

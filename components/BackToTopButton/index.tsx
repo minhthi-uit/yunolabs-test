@@ -31,6 +31,7 @@ const BackToTopButton: React.FC = () => {
     <div className="fixed bottom-16 sm:bottom-72 sm:right-16 right-5 z-50">
       {isVisible && (
         <button
+          aria-label='scroll to top'
           type="button"
           onClick={scrollToTop}
           className="bg-beige h-8 w-8 rounded-full focus:outline-none flex items-center justify-center"

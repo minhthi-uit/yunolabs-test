@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero: React.FC<{ heroContent: IHero }> = ({ heroContent }) => (
   <section className="relative w-full mx-auto pt-[1000px]">
-    <Image fill priority src={heroContent.backgroundImage} alt={heroContent.title} className=" absolute object-contain md:object-cover 2xl:object-contain" />
+    <Image fill priority src={heroContent.backgroundImage} alt={heroContent.title} className=" absolute object-cover" />
     <div className="relative bottom-7 md:bottom-20 left-0 paddingX text-white z-10">
       <p className="text-titleMd md:text-4xl xl:text-5xl text-white lg:w-2/3">{heroContent.title}</p>
       <button
