@@ -11,7 +11,7 @@ const Navbar: React.FC = () => {
 
   return (
     <header className="relative bg-beige paddingX">
-      <nav className="container max-w-screen-2xl mx-auto flex items-center justify-between p-4">
+      <nav className="mx-auto flex items-center justify-between py-4">
         <Logo variant='dark' />
         <HamburgerMenu openMenu={openMenu} toggleMenu={toggleMenu} />
         <BookNowButton />
