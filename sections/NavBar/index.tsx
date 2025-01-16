@@ -10,7 +10,7 @@ const Navbar: React.FC = () => {
   const toggleMenu = () => setOpenMenu(!openMenu);
 
   return (
-    <header className="relative bg-prime paddingX">
+    <header className="relative bg-beige paddingX">
       <nav className="container max-w-screen-2xl mx-auto flex items-center justify-between p-4">
         <Logo variant='dark' />
         <HamburgerMenu openMenu={openMenu} toggleMenu={toggleMenu} />
@@ -45,7 +45,7 @@ const BookNowButton: React.FC = () => (
 
 const MobileMenu: React.FC<{ openMenu: boolean; toggleMenu: () => void }> = ({ openMenu, toggleMenu }) => (
   <div
-    className={`fixed top-0 left-0 w-full h-full z-40 bg-white transition-transform duration-500 ${openMenu ? 'translate-x-0' : '-translate-x-full'}`}
+    className={`fixed top-0 left-0 w-full h-full z-40 bg-beige transition-transform duration-500 ${openMenu ? 'translate-x-0' : '-translate-x-full'}`}
   >
     {openMenu && <MobileNavbar setOpenMenu={toggleMenu} />}
   </div>
